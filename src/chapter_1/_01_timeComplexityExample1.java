@@ -3,7 +3,7 @@ package chapter_1;
 public class _01_timeComplexityExample1 {
 
 	public static void main(String[] args) {
-		// 1~100 »çÀÌ °ª ·£´ı ¼±ÅÃ
+		// 1~100 ì‚¬ì´ ê°’ ëœë¤ ì„ íƒ
 		int findNumber = (int)(Math.random() * 100);
 		for(int i = 0; i < 100; i++) {
 			if(i == findNumber) {
