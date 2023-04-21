@@ -37,7 +37,7 @@ public class _03_구간_합_구하기2_dongso {
 			
 			// 전체구간
 			if(x1 == 1 && y1 == 1 && x2 == N && y2 == N) {
-				bw.write("전체구간 디버깅");
+//				bw.write("전체구간 디버깅");
 				for(int x = 0; x < N; x++) {
 					for(int y = 0; y < N; y++) {
 						sum += square[x][y];
@@ -45,11 +45,11 @@ public class _03_구간_합_구하기2_dongso {
 				}
 			// 좌표가 같은 구간
 			} else if(x1 == x2 && y1 == y2) {
-				bw.write("좌표가 같은 구간");
+//				bw.write("좌표가 같은 구간");
 				sum += square[x1 - 1][y1 - 1];
 			// 전체구간도 아니고, 좌표도 같지 않을 경우
 			} else {
-				bw.write("그 외 구간");
+//				bw.write("그 외 구간");
 				for(int x = x1 - 1; x < x2; x++) {
 					// 마지막 행
 					if(x == x2 - 1) {
