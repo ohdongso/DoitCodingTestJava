@@ -1,43 +1,36 @@
 package chapter_3;
 
-import java.io .BufferedReader;   
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Arrays;
 import java.util.StringTokenizer;
-public class Main {
 
-	public static void main(String[] args) throws IOException {
+public class _06_주몽의_명령_FM {
+
+	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
 		int N = Integer.parseInt(br.readLine()); // 재료의 개수
 		int M = Integer.parseInt(br.readLine()); // 갑옷이 완성되는 번호의 합
-		int start_index = 0; 
-		int end_index = N - 1;
-		int count = 0;
+		int[] array = new int[N];
 		
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		int[] array = new int[N];
 		for(int i = 0; i < N; i++) {
 			array[i] = Integer.parseInt(st.nextToken());
 		}
 		
 		// 정렬
-		// 가장 끝자리에 가장큰수를 저장하면서 오름차순 정렬한다.
-		for(int i = 0; i < N - 1; i++) {
-			// i만큼 빼주는 이유는 제일 끝자리에 가장 큰수가 들어 갔기때문에 비교해줄 필요가 없다.
-			for(int j = 0; j < N - 1 - i; j++) { 
-				if(array[j] > array[j + 1]) {
-					int tmp = array[j];
-					array[j] = array[j + 1];
-					array[j + 1] = tmp;
-				}
-			}
-		}
+		Arrays.sort(array);
 		
-		while(start_index < end_index) {
+		int count = 0;
+		int start_index = 0;
+		int end_index = N - 1;
+		
+		while(start_index < end_index) { // 투 포인터 이동 원칙 따라 포인터를 이동하며 처리
 			if(array[start_index] + array[end_index] < M) {
 				start_index++;
 			} else if(array[start_index] + array[end_index] > M) {
