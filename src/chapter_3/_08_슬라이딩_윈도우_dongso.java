@@ -1,12 +1,13 @@
 package chapter_3;
 
-import java.io .BufferedReader;    
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
-public class Main {
+
+public class _08_슬라이딩_윈도우_dongso {
 	static int[] myArr;
 	static int[] checkArr;
 	static int checkSecret;
