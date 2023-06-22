@@ -7,8 +7,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.PriorityQueue;
 
-public class Main {
-	
+public class _14_절대갑_힙_구현하기_dongso {
+
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw= new BufferedWriter(new OutputStreamWriter(System.out));
