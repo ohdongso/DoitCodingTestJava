@@ -56,11 +56,11 @@ public class _16_버블_소트_프로그램1_dongso {
 		}
 	}
 	
-	class mData2 implements Comparable<mData> {
+	class mData implements Comparable<mData> {
 		int value;
 		int index;
 		
-		public mData2(int value, int index) {
+		public mData(int value, int index) {
 			super();
 			this.value = value;
 			this.index = index;
